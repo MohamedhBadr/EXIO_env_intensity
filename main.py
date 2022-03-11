@@ -55,7 +55,7 @@ US_2011_air.style.background_gradient(cmap ='Blues')
 # %%
 
 #Lets see the largest contributers to Co2 combustion- air
-US_1995_air.loc['CO2 - combustion - air'].plot(figsize=(50,50), kind='barh')
+US_1995_air.loc['CO2 - combustion - air'].plot(figsize=(100,100), kind='barh')
 # %%
 #Can we merge the two plots of Co2 emissions on air in the US and compare between 1995 and 2011?
 df1 = US_1995_air.loc['CO2 - combustion - air']
@@ -65,9 +65,7 @@ df3= df3.rename({'CO2 - combustion - air_x':'1995', 'CO2 - combustion - air_y': 
 
 # %%
 #in the bellow plot we can see that in most cases the multiplier intensities have gone down for most industries from 1995-2011
-df3.plot(figsize=(50,50), kind='barh')
-<<<<<<< HEAD
+df3.plot(figsize=(100,100), kind='barh')
 
 # %%
-=======
->>>>>>> 75c0998e4692c73f600794767466cc96e34aeae4
+#If this works fine we can move on to load the rest of the years from exiobase and specifiying the region, stressor, and maybe sector. 
