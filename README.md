@@ -1,5 +1,5 @@
 # The Change in the Carbon intensity of French Agricultural Products
-## Mohamed Badr & Molly Strimbeck Bazilchuck 
+### Mohamed Badr & Molly Strimbeck Bazilchuk 
 
 Comparison of the carbon intensity of french agricultural production over time using EXIOBASE3
 
