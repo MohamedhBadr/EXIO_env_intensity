@@ -58,6 +58,7 @@ Air.plot(figsize=(100,100), kind='barh')
 FR_Agr_M_1995 = FR_Multipliers_1995.iloc[:, 0:17]
 FR_Agr_M_2011 = FR_Multipliers_2011.iloc[:, 0:17]
 
+
 # %%
 
 #Comparing carbon intensities of of the French agricultural sector from 1995-2011
@@ -66,7 +67,8 @@ df1 = FR_Agr_M_1995.loc[Stressor]
 df2= FR_Agr_M_2011.loc[Stressor]
 df3 = pd.merge(df1, df2, left_index=True, right_index=True)
 df3= df3.rename({'CO2 - combustion - air_x':'1995', 'CO2 - combustion - air_y': '2011'}, axis='columns')
-df3.plot(figsize=(100,100), kind='barh')
+df3.plot(figsize=(10,10), kind='barh')
+
 
 # %%
 """
@@ -77,7 +79,3 @@ Keeping in mind that the indicator chosen here was 'C02- combustion- air'
 To get a more wholisitic view more analysis is needed. 
 
 """
-
-# %%
-exio3_1995.satellite.M.shape
-# %%
