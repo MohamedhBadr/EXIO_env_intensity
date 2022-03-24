@@ -1,8 +1,13 @@
-# EXIO_env_intensity
-Comparison of environmental intensity of economic production over time using EXIOBASE3
+# The Change in the Carbon intensity of French Agricultural Products
+## Mohamed Badr & Molly Strimbeck Bazilchuck 
+
+Comparison of the carbon intensity of french agricultural production over time using EXIOBASE3
 
 Throughout this analysis the Pymrio python library is used to parse and read in EXIOBASE3
 https://pymrio.readthedocs.io/en/latest/intro.html#
+
+**Research question(s):** How much have the multipliers of French agricultural products decreased from 1995 with regards to C02. More so, has this decrease resulted in the overall decrease in carbon emmisions from Agriculture, or has this decrease been offset by a growth in consumption?
+
 
 **Downloading the Data**
 
@@ -12,5 +17,6 @@ How do consumption related impact multipliers (i.e., the environmental intensity
 
 Current Prgress: until now the Pymrio library is used to parse EXIOBASE.For now I use the two years 1995 and 2011. Pymrio offers automated calculations of all matrices. Using the calc_all() function we can get the M matrix (multipliers) which we can then use for our analysis. We still need to choose indicators and regions.
 
-For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2011. 
-![output](https://user-images.githubusercontent.com/62759252/157673491-5e77fb0c-1bc2-490d-a1b8-f5d4b301a5ba.png)
+**Basic Findings:**
+For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2011.There is a general downwards trend with regards to carbon intensity of French agricultural products. 
+![output2](https://user-images.githubusercontent.com/62759252/159942275-5e939b2f-030c-4149-8b15-729124a6bc25.png)
