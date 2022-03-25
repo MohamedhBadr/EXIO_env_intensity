@@ -15,10 +15,9 @@ For this analysis we need to download EXIOBASE from: https://exiobase.eu/index.p
 
 How do consumption related impact multipliers (i.e., the environmental intensity of purchasing 1EUR of a sectors product) change over time? To what extent is the multiplier reduced over time, and will this rate be enough to achieve substantial reductions in environmental impacts if the current trends, including increases in consumption, continue? Which sectors are particularly relevant, and will there be a limit to how much individual sectors, or the whole economy, can become less intensive? Make a choice of indicator (carbon, land, biodiversity, materials) and regions.
 
-Current Prgress: until now the Pymrio library is used to parse EXIOBASE.For now I use the years 1995, 2008, 2011, 2020. Pymrio offers automated calculations of all matrices. Using the calc_all() function we can get the M matrix (multipliers) which we can then use for our analysis. We still need to choose indicators and regions.
+Current Prgress: until now the Pymrio library is used to parse EXIOBASE.For now I use the years 1995, 2008, 2011, 2016, 2020. Pymrio offers automated calculations of all matrices. Using the calc_all() function we can get the M matrix (multipliers) which we can then use for our analysis. We still need to choose indicators and regions.
 
 **Basic Findings:**
-For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2011.There is a general downwards trend with regards to carbon intensity of French agricultural products. 
+For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2020.There is a general downwards trend with regards to carbon intensity of French agricultural products. We can also see that in the years 2008 and 2020 there is a general reduction in multiplier value for most agricultural products. This can be explained by the increase of in prices of primary goods at times of global recession. 
 
-
-![latest output](https://user-images.githubusercontent.com/62759252/160098398-7dc8f381-de71-4a97-a035-1d238b1778b6.png)
+![latest output](https://user-images.githubusercontent.com/62759252/160137978-302322b1-a846-4963-b428-270ce2d09560.png)
