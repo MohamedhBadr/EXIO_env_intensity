@@ -88,6 +88,14 @@ Merged_df = Merged_df.reset_index()
 Merged_df.columns.values[[1, 2, 3, 4]] = ['1995', '2008','2011', '2020']
 Merged_df = Merged_df.set_index('sector')
 
+
+# %%
+
+#Visualize the findings
+
+#wool has a massive carbon intensity
+Merged_df.plot(kind = 'bar')
+
  #The value of Wool is too high and distorts the vizualization
  #Need to look more into this
 
@@ -104,3 +112,4 @@ I use the years 1995, 2008, 2011, and 2020, I think it could be interesting to w
 of global economic shocks (2008 financial crisis, and 2020 covid) on carbon intensities.
 
 """
+# %%
