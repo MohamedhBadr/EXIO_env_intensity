@@ -19,4 +19,6 @@ Current Prgress: until now the Pymrio library is used to parse EXIOBASE.For now 
 
 **Basic Findings:**
 For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2011.There is a general downwards trend with regards to carbon intensity of French agricultural products. 
+
+
 ![latest output](https://user-images.githubusercontent.com/62759252/160098398-7dc8f381-de71-4a97-a035-1d238b1778b6.png)
