@@ -137,3 +137,6 @@ of global economic shocks (2008 financial crisis, and 2020 covid) on carbon inte
 
 """
 # %%
+#Get a time series visualization
+SecondTrial = Trial_df.T
+SecondTrial.plot.line(figsize=(15,15))
