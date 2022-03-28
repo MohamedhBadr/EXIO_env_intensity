@@ -1,7 +1,7 @@
 # The Change in the Carbon intensity of French Agricultural Products
 ### Mohamed Badr & Molly Strimbeck Bazilchuk 
 
-Comparison of the carbon intensity of French agricultural production (1995-2020) using EXIOBASE3
+Comparison of the carbon intensity of French agricultural production (1995-2022) using EXIOBASE3
 
 Throughout this analysis the Pymrio python library is used to parse and read in EXIOBASE3
 https://pymrio.readthedocs.io/en/latest/intro.html#
