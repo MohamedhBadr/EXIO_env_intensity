@@ -28,6 +28,7 @@ A Time series viualization showing change in multiplier value over time.
 
 Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We can see that despite multiplier reduction from 1996 to 2022, due to increase consumption the total impacts from the consumption of French agricultural products has increased in most sectors. 
 
-![cba divergence](https://user-images.githubusercontent.com/62759252/161257585-bd1603ff-e726-4104-ad4a-1a89c5b92078.png)
+![cba divergence](https://user-images.githubusercontent.com/62759252/161279446-c1cef288-8938-4ac4-a723-cba780c5be6e.png)
+
 
 
