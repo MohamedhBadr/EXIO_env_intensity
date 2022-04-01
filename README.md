@@ -20,10 +20,11 @@ Current Prgress: until now the Pymrio library is used to parse EXIOBASE. Pymrio 
 **Basic Findings:**
 For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2020.There is a general downwards trend with regards to carbon intensity of French agricultural products. We can also see that in the years 2008 and 2020 there is a general reduction in multiplier value for most agricultural products. This can be explained by the increase of in prices of primary goods at times of global recession. 
 
-![latest output](https://user-images.githubusercontent.com/62759252/160396834-5fc3c567-8c28-4e80-8186-7445c4e39481.png)
+![latest output](https://user-images.githubusercontent.com/62759252/161257237-daf6777d-ef61-4aab-89fa-d41ef9b70b2c.png)
 
 
 A Time series viualization showing change in multiplier value over time. 
-![lineplot](https://user-images.githubusercontent.com/62759252/160396698-8f1d5909-d037-492b-855d-8d493e764ea1.png)
+![line_ghg](https://user-images.githubusercontent.com/62759252/161257283-3b5392ba-b256-4ccb-aae4-eab4f07b30cf.png)
+
 
 
