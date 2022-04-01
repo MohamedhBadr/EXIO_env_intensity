@@ -18,7 +18,7 @@ How do consumption related impact multipliers (i.e., the environmental intensity
 Current Prgress: until now the Pymrio library is used to parse EXIOBASE. Pymrio offers automated calculations of all matrices. Using the calc_all() function we can get the M matrix (multipliers) which we can then use for our analysis. We still need to choose indicators and regions.
 
 **Basic Findings:**
-For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1995 and 2020.There is a general downwards trend with regards to carbon intensity of French agricultural products. We can also see that in the years 2008 and 2020 there is a general reduction in multiplier value for most agricultural products. This can be explained by the increase of in prices of primary goods at times of global recession. 
+For now using this code I can produce this visuallization which is jsut a comparision of multiplier intensitiy between 1996 and 2022.There is a general downwards trend with regards to carbon intensity of French agricultural products. We can also see that in the years 2008 and 2020 there is a general reduction in multiplier value for most agricultural products. This can be explained by the increase of in prices of primary goods at times of global recession. 
 
 ![latest output](https://user-images.githubusercontent.com/62759252/161257237-daf6777d-ef61-4aab-89fa-d41ef9b70b2c.png)
 
@@ -26,5 +26,8 @@ For now using this code I can produce this visuallization which is jsut a compar
 A Time series viualization showing change in multiplier value over time. 
 ![line_ghg](https://user-images.githubusercontent.com/62759252/161257283-3b5392ba-b256-4ccb-aae4-eab4f07b30cf.png)
 
+Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We can see that despite multiplier reduction from 1996 to 2022, due to increase consumption the total impacts from the consumption of French agricultural products has increased in most sectors. 
+
+![cba divergence](https://user-images.githubusercontent.com/62759252/161257585-bd1603ff-e726-4104-ad4a-1a89c5b92078.png)
 
 
