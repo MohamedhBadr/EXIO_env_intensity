@@ -320,23 +320,46 @@ FR_D_cba_agr_1996 = FR_D_cba_1996.iloc[:, 0:15]
 FR_D_cba_agr_ghg_1996 = FR_D_cba_agr_1996.loc[ghg]
 FR_D_cba_agr_ghg_1996
 
+#2000
+FR_D_cba_2000 = exio3_2000.impacts.D_cba[Country]
+FR_D_cba_agr_2000 = FR_D_cba_2000.iloc[:, 0:15]
+FR_D_cba_agr_ghg_2000 = FR_D_cba_agr_2000.loc[ghg]
+FR_D_cba_agr_ghg_2000
+
+#2010
+FR_D_cba_2010 = exio3_2010.impacts.D_cba[Country]
+FR_D_cba_agr_2010 = FR_D_cba_2010.iloc[:, 0:15]
+FR_D_cba_agr_ghg_2010 = FR_D_cba_agr_2010.loc[ghg]
+FR_D_cba_agr_ghg_2010
+
+
+#2014
+FR_D_cba_2014 = exio3_2014.impacts.D_cba[Country]
+FR_D_cba_agr_2014 = FR_D_cba_2014.iloc[:, 0:15]
+FR_D_cba_agr_ghg_2014 = FR_D_cba_agr_2014.loc[ghg]
+FR_D_cba_agr_ghg_2014
+
+#2018
+FR_D_cba_2018 = exio3_2018.impacts.D_cba[Country]
+FR_D_cba_agr_2018 = FR_D_cba_2018.iloc[:, 0:15]
+FR_D_cba_agr_ghg_2018 = FR_D_cba_agr_2018.loc[ghg]
+FR_D_cba_agr_ghg_2018
+
 #2022
 FR_D_cba_2022 = exio3_2022.impacts.D_cba[Country]
 FR_D_cba_agr_2022 = FR_D_cba_2022.iloc[:, 0:15]
 FR_D_cba_agr_ghg_2022 = FR_D_cba_agr_2022.loc[ghg]
 FR_D_cba_agr_ghg_2022
 
+
+
+# %%
+
 #Bar Plot
-D_cba_data = [FR_D_cba_agr_ghg_1996,FR_D_cba_agr_ghg_2022]
+D_cba_data = [FR_D_cba_agr_ghg_1996,FR_D_cba_agr_ghg_2000,FR_D_cba_agr_ghg_2010,FR_D_cba_agr_ghg_2014,FR_D_cba_agr_ghg_2018,FR_D_cba_agr_ghg_2022]
 
 D_cba_data_t = pd.concat(D_cba_data, join='outer', axis=1).fillna(0)
 D_cba_data_t = D_cba_data_t.reset_index()
-D_cba_data_t.columns.values[[1, 2]] = ['1996','2022']
+D_cba_data_t.columns.values[[1, 2,3,4,5,6]] = ['1996','2000','2010','2014','2018','2022']
 D_cba_data_t = D_cba_data_t.set_index('sector')
 D_cba_data_t.plot(figsize=(10,10),kind = 'bar')
-
-
-
-# %%
-
-# %%
