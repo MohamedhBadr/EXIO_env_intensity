@@ -19,10 +19,12 @@ Current Prgress: until now the Pymrio library is used to parse EXIOBASE. Pymrio 
 For now, using this code I can produce this visuallization which is just a comparision of multiplier intensitiy between 1996 and 2022. There is a general downwards trend with regards to carbon intensity of French agricultural products. We continue this analysis by exploring consumption based accounting (CBA) of the sector. We find that despite a reduction in multiplier intensity from 1996-2022, this has been largely offset by a growth in consumption. 
 
 Bar plot of change in GHG intensities per products of french agriculture
-![ghg_bar](https://user-images.githubusercontent.com/62759252/161279955-fdc063b0-49d9-4f70-b7af-0f223798a7cb.png)
+![Bar_ghg](https://user-images.githubusercontent.com/62759252/161522259-05342f1f-eebf-4723-82db-5ab89a6e6844.png)
+
 
 A Time series viualization showing change in multiplier value over time (using GHG). 
-![line_ghg](https://user-images.githubusercontent.com/62759252/161257283-3b5392ba-b256-4ccb-aae4-eab4f07b30cf.png)
+![line_ghg](https://user-images.githubusercontent.com/62759252/161522208-0478b956-66ed-4f21-ace0-53057aa0316a.png)
+
 
 Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We can see that despite multiplier reduction from 1996 to 2022, due to increase consumption the total impacts from the consumption of French agricultural products has increased in most sectors. 
 
