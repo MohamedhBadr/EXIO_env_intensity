@@ -1,4 +1,5 @@
 
+
 """
 Analysing he Carbon intensity of French Agricultural Products
 
@@ -284,6 +285,7 @@ ghg_2022 = impacts_2022.F.loc[[ghg]]
 ghg_2022 = ghg_2022[Country]
 ghg_2022 = ghg_2022.iloc[:, 0:15]
 
+
 # %%
 #Visualize
 
@@ -292,27 +294,31 @@ data = [ghg_1996,ghg_1998,ghg_2000,ghg_2002,ghg_2004,ghg_2006,ghg_2010,ghg_2012,
 ghg_df = pd.concat(dfs, join='outer', axis=1).fillna(0)
 ghg_df = ghg_df.reset_index()
 ghg_df.columns.values[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]] = ['1996','1998', '2000','2002', '2004','2006','2010','2012','2014','2016','2018','2022']
+ghg_df = ghg_df.iloc[:,0:13]
 ghg_df = ghg_df.set_index('sector')
+
+
+# %%
 
 #With Wool
 ghg_df.plot(figsize=(15,15), kind='bar')
 
 #without Wool
 Trial_ghg_df = ghg_df.drop(index = 'Wool, silk-worm cocoons')
-Trial_ghg_df.plot(figsize=(15,15), kind='bar')
+Trial_ghg_df.plot(figsize=(15,15), kind='bar',title='French Agriculture Multiplier Value - GHG')
 
 #Line plot not including wool
 ghg_t = Trial_ghg_df.T
-ghg_t.plot.line(figsize=(15,15))
+ghg_t.plot.line(figsize=(15,15),title='French Agriculture Multiplier Value- GHG')
 
 ### NOTE:
 ## For some reason the characterization factors function
 ## Doesn't work on the years 2008 and 2020 
 ## does this have to do with the recession
 
-# %%
 
-#GET Total impacts from consumption based accounting
+# %%
+#get Total impacts from consumption based accounting
 
 #1996
 FR_D_cba_1996 = exio3_1996.impacts.D_cba[Country]
@@ -352,7 +358,6 @@ FR_D_cba_agr_ghg_2022 = FR_D_cba_agr_2022.loc[ghg]
 FR_D_cba_agr_ghg_2022
 
 
-
 # %%
 
 #Bar Plot
@@ -362,4 +367,38 @@ D_cba_data_t = pd.concat(D_cba_data, join='outer', axis=1).fillna(0)
 D_cba_data_t = D_cba_data_t.reset_index()
 D_cba_data_t.columns.values[[1, 2,3,4,5,6]] = ['1996','2000','2010','2014','2018','2022']
 D_cba_data_t = D_cba_data_t.set_index('sector')
-D_cba_data_t.plot(figsize=(10,10),kind = 'bar')
+D_cba_data_t.plot(figsize=(10,10),kind = 'bar',title='Consumption Based accounts')
+
+
+
+# %%
+## SECTOR analysis
+
+sector = 'Animal products nec'
+
+sec_1996 = FR_D_cba_agr_ghg_1996[sector]
+sec_2000 = FR_D_cba_agr_ghg_2000[sector]
+sec_2010 = FR_D_cba_agr_ghg_2010[sector]
+sec_2014 = FR_D_cba_agr_ghg_2014[sector]
+sec_2018 = FR_D_cba_agr_ghg_2018[sector]
+sec_2022 = FR_D_cba_agr_ghg_2022[sector]
+
+## Bar graph (normalized to the reference year 1996)
+data = {'1996':[sec_1996], '2000': [sec_2000], '2010': [sec_2010],'2014': [sec_2014],'2018': [sec_2018],'2022': [sec_2022] }
+sector_analysis = pd.DataFrame(data = data)
+sector_analysis.iloc[0] = sector_analysis.iloc[0]/sec_1996
+sector_analysis = sector_analysis.rename(index={0: 'CBA value'})
+sector_analysis.plot(kind='bar', title = 'Normalized CBA '+ sector, colormap='tab20c')
+
+##Line plot 
+sector_analysis_t = sector_analysis.T
+sector_analysis_t.plot.line(figsize=(10,10), title = 'Normalized CBA '+ sector)
+# %%
+
+
+impacts_2020 = exio3_2020.satellite.characterize(charact_table, name="impacts")
+ghg_2020 = impacts_2020.F.loc[[ghg]]
+ghg_2020 = ghg_2020[Country]
+ghg_2020 = ghg_2020.iloc[:, 0:15]
+ghg_2020
+
