@@ -31,4 +31,9 @@ Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We c
 ![cba divergence](https://user-images.githubusercontent.com/62759252/161279446-c1cef288-8938-4ac4-a723-cba780c5be6e.png)
 
 
+**Sector Analysis**
+
+Here we can see how much the CBA footprint of a given sector has changed within the time frame. Values are normalized to the reference year 1996. 
+![normalized_ghg_sector_bar](https://user-images.githubusercontent.com/62759252/161553272-b4ee6cf5-503f-47f1-a763-59d81f48a998.png)
+
 
