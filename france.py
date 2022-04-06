@@ -16,6 +16,7 @@ so we use every other year
 
 # %%
 # Load Libraries
+from matplotlib.pyplot import title
 import pymrio
 import pandas 
 import numpy as np
@@ -26,7 +27,8 @@ import pandas as pd
 
 #two letter code for country 
 Country = 'FR'
-Stressor = 'CO2 - combustion - air'
+charact_table = pd.read_csv('public_char_factors (1).csv',  sep='\t')
+ghg = 'GHG emissions (GWP100) | Problem oriented approach: baseline (CML, 2001) | GWP100 (IPCC, 2007)'
 
 # %%
 #load data
@@ -77,20 +79,18 @@ exio3_2022.calc_all()
 
 # %%
 #Sattelite Accounts
-FR_Multipliers_1996 = exio3_1996.satellite.M[Country]
-FR_Multipliers_1998 = exio3_1998.satellite.M[Country]
-FR_Multipliers_2000 = exio3_2000.satellite.M[Country]
-FR_Multipliers_2002 = exio3_2002.satellite.M[Country]
-FR_Multipliers_2004 = exio3_2004.satellite.M[Country]
-FR_Multipliers_2006 = exio3_2006.satellite.M[Country]
-FR_Multipliers_2008 = exio3_2008.satellite.M[Country]
-FR_Multipliers_2010 = exio3_2010.satellite.M[Country]
-FR_Multipliers_2012 = exio3_2012.satellite.M[Country]
-FR_Multipliers_2014 = exio3_2014.satellite.M[Country]
-FR_Multipliers_2016 = exio3_2016.satellite.M[Country]
-FR_Multipliers_2018 = exio3_2018.satellite.M[Country]
-FR_Multipliers_2020 = exio3_2020.satellite.M[Country]
-FR_Multipliers_2022 = exio3_2022.satellite.M[Country]
+FR_Multipliers_1996 = exio3_1996.impacts.M[Country]
+FR_Multipliers_1998 = exio3_1998.impacts.M[Country]
+FR_Multipliers_2000 = exio3_2000.impacts.M[Country]
+FR_Multipliers_2002 = exio3_2002.impacts.M[Country]
+FR_Multipliers_2004 = exio3_2004.impacts.M[Country]
+FR_Multipliers_2006 = exio3_2006.impacts.M[Country]
+FR_Multipliers_2010 = exio3_2010.impacts.M[Country]
+FR_Multipliers_2012 = exio3_2012.impacts.M[Country]
+FR_Multipliers_2014 = exio3_2014.impacts.M[Country]
+FR_Multipliers_2016 = exio3_2016.impacts.M[Country]
+FR_Multipliers_2018 = exio3_2018.impacts.M[Country]
+FR_Multipliers_2022 = exio3_2022.impacts.M[Country]
 
 
 
@@ -106,13 +106,11 @@ FR_Agr_M_2000 = FR_Multipliers_2000.iloc[:, 0:15]
 FR_Agr_M_2002 = FR_Multipliers_2002.iloc[:, 0:15]
 FR_Agr_M_2004 = FR_Multipliers_2004.iloc[:, 0:15]
 FR_Agr_M_2006 = FR_Multipliers_2006.iloc[:, 0:15]
-FR_Agr_M_2008 = FR_Multipliers_2008.iloc[:, 0:15]
 FR_Agr_M_2010 = FR_Multipliers_2010.iloc[:, 0:15]
 FR_Agr_M_2012 = FR_Multipliers_2012.iloc[:, 0:15]
 FR_Agr_M_2014 = FR_Multipliers_2014.iloc[:, 0:15]
 FR_Agr_M_2016 = FR_Multipliers_2016.iloc[:, 0:15]
 FR_Agr_M_2018 = FR_Multipliers_2018.iloc[:, 0:15]
-FR_Agr_M_2020 = FR_Multipliers_2020.iloc[:, 0:15]
 FR_Agr_M_2022 = FR_Multipliers_2022.iloc[:, 0:15]
 
 
@@ -120,26 +118,26 @@ FR_Agr_M_2022 = FR_Multipliers_2022.iloc[:, 0:15]
 
 #Comparing carbon intensities of of the French agricultural sector from 1995-2011
 
-df1 = FR_Agr_M_1996.loc[Stressor]
-df2 = FR_Agr_M_1998.loc[Stressor]
-df3 = FR_Agr_M_2000.loc[Stressor]
-df4 = FR_Agr_M_2002.loc[Stressor]
-df5 = FR_Agr_M_2004.loc[Stressor]
-df6 = FR_Agr_M_2006.loc[Stressor]
-df7 = FR_Agr_M_2008.loc[Stressor]
-df8 = FR_Agr_M_2010.loc[Stressor]
-df9 = FR_Agr_M_2012.loc[Stressor]
-df10 = FR_Agr_M_2014.loc[Stressor]
-df11 = FR_Agr_M_2016.loc[Stressor]
-df12 = FR_Agr_M_2018.loc[Stressor]
-df13 = FR_Agr_M_2020.loc[Stressor]
-df14 = FR_Agr_M_2022.loc[Stressor]
+ghg = 'GHG emissions (GWP100) | Problem oriented approach: baseline (CML, 2001) | GWP100 (IPCC, 2007)'
 
-dfs = [df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12, df13, df14]
+df1 = FR_Agr_M_1996.loc[ghg]
+df2 = FR_Agr_M_1998.loc[ghg]
+df3 = FR_Agr_M_2000.loc[ghg]
+df4 = FR_Agr_M_2002.loc[ghg]
+df5 = FR_Agr_M_2004.loc[ghg]
+df6 = FR_Agr_M_2006.loc[ghg]
+df7 = FR_Agr_M_2010.loc[ghg]
+df8 = FR_Agr_M_2012.loc[ghg]
+df9 = FR_Agr_M_2014.loc[ghg]
+df10 = FR_Agr_M_2016.loc[ghg]
+df11 = FR_Agr_M_2018.loc[ghg]
+df12 = FR_Agr_M_2022.loc[ghg]
+
+dfs = [df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12]
 
 Merged_df = pd.concat(dfs, join='outer', axis=1).fillna(0)
 Merged_df = Merged_df.reset_index()
-Merged_df.columns.values[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]] = ['1996','1998', '2000','2002', '2004','2006', '2008', '2010','2012','2014', '2016','2018','2020','2022']
+Merged_df.columns.values[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]] = ['1996','1998', '2000','2002', '2004','2006', '2010','2012','2014', '2016','2018','2022']
 Merged_df = Merged_df.set_index('sector')
 
 
@@ -154,10 +152,10 @@ Merged_df.plot(kind = 'bar')
  #Need to look more into this
 
 Trial_df = Merged_df.drop(index = 'Wool, silk-worm cocoons')
-Trial_df.plot(figsize=(15,15), kind='bar')
+Trial_df.plot(figsize=(15,15), kind='bar', title = 'GHG multiplier value- French Agriculture')
 
 SecondTrial = Trial_df.T
-SecondTrial.plot.line(figsize=(15,15))
+SecondTrial.plot.line(figsize=(15,15), title = 'GHG multiplier value- French Agriculture')
 
 # %%
 """
@@ -185,9 +183,8 @@ and plot accordingly
 
 #GET Total GHG emissions
 
-charact_table = pd.read_csv('public_char_factors (1).csv',  sep='\t')
-ghg = 'GHG emissions (GWP100) | Problem oriented approach: baseline (CML, 2001) | GWP100 (IPCC, 2007)'
 
+# %%
 #Get GHG impacts in From French agriculture 1996
 impacts_1996 = exio3_1996.satellite.characterize(charact_table, name="impacts")
 ghg_1996 = impacts_1996.F.loc[[ghg]]
@@ -286,17 +283,16 @@ ghg_2022 = ghg_2022[Country]
 ghg_2022 = ghg_2022.iloc[:, 0:15]
 
 
+
 # %%
 #Visualize
 
 data = [ghg_1996,ghg_1998,ghg_2000,ghg_2002,ghg_2004,ghg_2006,ghg_2010,ghg_2012,ghg_2014,ghg_2016,ghg_2018,ghg_2022]
 
-ghg_df = pd.concat(dfs, join='outer', axis=1).fillna(0)
-ghg_df = ghg_df.reset_index()
-ghg_df.columns.values[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]] = ['1996','1998', '2000','2002', '2004','2006','2010','2012','2014','2016','2018','2022']
-ghg_df = ghg_df.iloc[:,0:13]
-ghg_df = ghg_df.set_index('sector')
-
+ghg_df = pd.concat(data).fillna(0)
+ghg_df.index.values[[0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]] = ['1996','1998', '2000','2002', '2004','2006', '2010','2012','2014', '2016','2018','2022']
+ghg_df = ghg_df.T
+ghg_df.plot(figsize = (10,10), kind='bar')
 
 # %%
 
@@ -310,11 +306,6 @@ Trial_ghg_df.plot(figsize=(15,15), kind='bar',title='French Agriculture Multipli
 #Line plot not including wool
 ghg_t = Trial_ghg_df.T
 ghg_t.plot.line(figsize=(15,15),title='French Agriculture Multiplier Value- GHG')
-
-### NOTE:
-## For some reason the characterization factors function
-## Doesn't work on the years 2008 and 2020 
-## does this have to do with the recession
 
 
 # %%
@@ -337,7 +328,6 @@ FR_D_cba_2010 = exio3_2010.impacts.D_cba[Country]
 FR_D_cba_agr_2010 = FR_D_cba_2010.iloc[:, 0:15]
 FR_D_cba_agr_ghg_2010 = FR_D_cba_agr_2010.loc[ghg]
 FR_D_cba_agr_ghg_2010
-
 
 #2014
 FR_D_cba_2014 = exio3_2014.impacts.D_cba[Country]
@@ -374,7 +364,7 @@ D_cba_data_t.plot(figsize=(10,10),kind = 'bar',title='Consumption Based accounts
 # %%
 ## SECTOR analysis
 
-sector = 'Animal products nec'
+sector = 'Oil seeds'
 
 sec_1996 = FR_D_cba_agr_ghg_1996[sector]
 sec_2000 = FR_D_cba_agr_ghg_2000[sector]
@@ -384,21 +374,12 @@ sec_2018 = FR_D_cba_agr_ghg_2018[sector]
 sec_2022 = FR_D_cba_agr_ghg_2022[sector]
 
 ## Bar graph (normalized to the reference year 1996)
-data = {'1996':[sec_1996], '2000': [sec_2000], '2010': [sec_2010],'2014': [sec_2014],'2018': [sec_2018],'2022': [sec_2022] }
-sector_analysis = pd.DataFrame(data = data)
+sec_data = {'1996':[sec_1996], '2000': [sec_2000], '2010': [sec_2010],'2014': [sec_2014],'2018': [sec_2018],'2022': [sec_2022] }
+sector_analysis = pd.DataFrame(data = sec_data)
 sector_analysis.iloc[0] = sector_analysis.iloc[0]/sec_1996
 sector_analysis = sector_analysis.rename(index={0: 'CBA value'})
-sector_analysis.plot(kind='bar', title = 'Normalized CBA '+ sector, colormap='tab20c')
+sector_analysis.plot(figsize =(10,10), kind='bar', title = 'Normalized CBA '+ sector, colormap='tab20c')
 
 ##Line plot 
 sector_analysis_t = sector_analysis.T
 sector_analysis_t.plot.line(figsize=(10,10), title = 'Normalized CBA '+ sector)
-# %%
-
-
-impacts_2020 = exio3_2020.satellite.characterize(charact_table, name="impacts")
-ghg_2020 = impacts_2020.F.loc[[ghg]]
-ghg_2020 = ghg_2020[Country]
-ghg_2020 = ghg_2020.iloc[:, 0:15]
-ghg_2020
-
