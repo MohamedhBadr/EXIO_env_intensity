@@ -34,8 +34,9 @@ Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We c
 **Sector Analysis**
 
 Here we can see how much the CBA footprint of a given sector has changed within the time frame. Values are normalized to the reference year 1996. 
+![normalized_ghg_meatanimals_bar](https://user-images.githubusercontent.com/62759252/161969609-90b60d0b-5b15-435f-8619-d52fa4dcaa6b.png)
 
-![normalized_ghg_sector_bar](https://user-images.githubusercontent.com/62759252/161567579-5cbfe49a-97c2-4a86-86c9-1091d8f2bacc.png)
+
 
 
 
