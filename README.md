@@ -21,8 +21,12 @@ For now, using this code I can produce this visuallization which is just a compa
 Bar plot of change in GHG intensities per products (multiplier value) of french agriculture
 ![output_bar](https://user-images.githubusercontent.com/62759252/162440876-c58a0410-51ed-4258-8463-141cccc38022.png)
 
+
 A Time series viualization showing change in multiplier value over time (using GHG). 
 ![output_line](https://user-images.githubusercontent.com/62759252/162440949-4016508a-f514-4323-b849-be33814ffb9e.png)
+
+In a more simple visualizations we show the change in multiplier value from the year 1996 to 2022. It is clear that in general, with a few exceptions, French agricultural products are less carbon intensive today compared to 1996.
+![simple_output](https://user-images.githubusercontent.com/62759252/162443693-eac8b0ed-c566-4bbd-b130-9ccb5a794eeb.png)
 
 
 Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We can see that despite multiplier reduction from 1996 to 2022, due to increase consumption the total impacts from the consumption of French agricultural products has increased in most sectors. 
