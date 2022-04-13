@@ -9,13 +9,52 @@
 \begin{document}
 \maketitle
 \vspace{3cm}
+\bibliographystyle{plain}
 
 \section{Introduction}
 
+Globally, food production is responsible for around one-quarter of the world's greenhouse gas emissions (https://ourworldindata.org/food-ghg-emissions), while agriculture, forestry and land-use change account for around 18\%. Reducing agricultural emissions will therefore be key in limiting the extent of climate change. In terms of agricultural, France is the largest producer in Europe and is therefore an interest case for study when considering emissions intensity change over time.
+
+We can consider emissions as the product of emission intensity and final demand or consumption of a given service or good. Environmentally extended input-output (EEIO) assessment allows us to examine the total emissions associated with a country's economy. In particular, we can calculate multipliers which allow us to examine the intensity in $kgCO_2e/Euro$ of producing a given product, including upstream emissions from products required as input to production. Compared to a footprint, which measures the whole impact of a sector, a multiplier allows us to decouple emissions intensity from the demand volume.
+
+In this work, we perform an input-output analysis of the agricultural products of France, considering in particular the multipliers, to determine whether the agricultural sector is growing cleaner during the period 1996 - 2021. While many studies choose to aggregate products in input-output tables to more general categories, we have maintained the high sectoral resolution inherent to the Exiobase database in order to see where gains are being made. Additionally, high variation between databases has been found when aggregating sectors due to differences in what the sectors contain.
+
+Example citation \cite{Schneider2009}
+
 \section{Methods and data}
+
+\subsection{Multipliers in input-output}
+
+For an input-output system, a multiplier is a quantity that, when multiplied with the final demand, gives the total emissions of a pollutant or other quantity such as energy consumption, labor use, etc. Multipliers $m$ are derived by performing the firm balance for some amount of emissions $F$, where $Z$ is the inter-industry flow matrix describing intermediate demand flowing between industries, and $x$ is the total output vector.
+
+\begin{equation}
+F + m Z = m \hat{x}
+\end{equation}
+
+We can then rearrange and express as a function of the Leontief inverse $L$ for a system.
+
+\begin{equation}
+m = F \hat{x}^{-1} (I - A)^{-1} = f \hat{x} L
+\end{equation}
+
+\subsection{Exiobase}
+
+Exiobase
+
+High sectoral resolution.
+
+
 
 \section{Results}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{output_line.png}
+\caption{GHG emissions per year of French agricultural sectors.}\label{fig:GHG} 
+\end{figure}
+
 \section{Discussion}
+
+\bibliography{IOreport}
 
 \end{document}
