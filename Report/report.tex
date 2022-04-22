@@ -9,17 +9,19 @@
 \begin{document}
 \maketitle
 \vspace{3cm}
-\bibliographystyle{plain}
+\bibliographystyle{abbrv}
 
 \section{Introduction}
 
-Globally, food production is responsible for around one-quarter of the world's greenhouse gas emissions (https://ourworldindata.org/food-ghg-emissions), while agriculture, forestry and land-use change account for around 18\%. Reducing agricultural emissions will therefore be key in limiting the extent of climate change. In terms of agricultural, France is the largest producer in Europe and is therefore an interest case for study when considering emissions intensity change over time.
+Globally, food production is responsible for around one-quarter of the world's greenhouse gas emissions (https://ourworldindata.org/food-ghg-emissions), while agriculture, forestry and land-use change account for around 18\%. Reducing agricultural emissions will therefore be key in limiting the extent of climate change. In terms of agricultural, France is the largest producer in Europe and is therefore an interest case for study when considering emissions intensity change over time. The French Ministry for Agriculture and Food stated in 2018 their goal to reduce emissions by 50\% by 2050 compared to 1990 levels. However, as is the case with the majority of government pledges, this deals with direct emissions rather than footprint or consumption-based emissions as we obtain from input-output analysis. 
 
 We can consider emissions as the product of emission intensity and final demand or consumption of a given service or good. Environmentally extended input-output (EEIO) assessment allows us to examine the total emissions associated with a country's economy. In particular, we can calculate multipliers which allow us to examine the intensity in $kgCO_2e/Euro$ of producing a given product, including upstream emissions from products required as input to production. Compared to a footprint, which measures the whole impact of a sector, a multiplier allows us to decouple emissions intensity from the demand volume.
 
-In this work, we perform an input-output analysis of the agricultural products of France, considering in particular the multipliers, to determine whether the agricultural sector is growing cleaner during the period 1996 - 2021. While many studies choose to aggregate products in input-output tables to more general categories, we have maintained the high sectoral resolution inherent to the Exiobase database in order to see where gains are being made. Additionally, high variation between databases has been found when aggregating sectors due to differences in what the sectors contain.
+In this work, we perform an input-output analysis of the agricultural products of France, considering in particular the multipliers, to determine whether the agricultural sector is growing cleaner during the period 1996 - 2021. While many studies choose to aggregate products in input-output tables to more general categories, we have kept the original agricultural sectors to consider their evolution in more detail. Additionally, high variation between databases has been found when aggregating sectors due to differences in what the sectors contain \cite{Steen-Olsen2014}
 
-Example citation \cite{Schneider2009}
+Previous input-output studies considering the footprint of agriculture have done so on a more aggregated level, and focus on the total footprint rather than the multipliers themselves \cite{Camanzi2017}. Emissions multipliers in China \cite{Liu2017}.
+
+Will multipliers improve? Mechanism of improving efficiency/technology: genetic improvements, more efficient machinery, improved agro-chemicals and more efficient irrigation systems \cite{Schneider2009}. Same study shows increased efficiency of all inputs to agriculture but stabilizes around 1995 - have we reached a technical cap?
 
 \section{Methods and data}
 
@@ -37,21 +39,33 @@ We can then rearrange and express as a function of the Leontief inverse $L$ for 
 m = F \hat{x}^{-1} (I - A)^{-1} = f \hat{x} L
 \end{equation}
 
-\subsection{Exiobase}
+\subsection{Data}
+
+The analysis was performed using EXIOBASE 3, the multi-regional input-output database with high sectoral resolution (200 products) and most accurate environmental extensions \cite{Stadler2018}. The scope of our model system was the 15 primary agricultural products. There are also secondary agricultural products (e.g. "dairy products" as opposed to "cattle"), but as our focus was on the production itself we excluded these. We chose to calculate multipliers for every other year from 1995 and onward to save computing power. 
 
 Exiobase
 
 High sectoral resolution.
 
-
+Inflation (deflators)
 
 \section{Results}
+
+Fig. \ref{fig:multipliers} shows the normalized evolution of the 14 agricultural multipliers from the year 1996 - 2021. Note that this data has not been adjusted for inflation, which would artificially increase the rate of reduction. The general trend is a decrease of the multipliers over time.
+
+Calculate the rate of decrease??
+
+In order to identify whether the 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{output_line.png}
 \caption{GHG emissions per year of French agricultural sectors.}\label{fig:GHG} 
 \end{figure}
+
+Can we fit the GHG emissions to a PAT framework? Might not be perfect since the agricultural products are being consumed by others than French citizens.
+
+Compare to targets - but these are on direct emissions, can we consider only these as well?
 
 \section{Discussion}
 
