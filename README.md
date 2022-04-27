@@ -29,7 +29,5 @@ Normalized GHG values (Normalized on the reference year of 1996.
 ![normalized](https://user-images.githubusercontent.com/62759252/165484219-5d7336fc-8ddc-452e-9f04-43273db033d6.jpg)
 
 
-Change in D_cba (Impacts from Consumption based accounting from 1996-2022). We can see that despite multiplier reduction from 1996 to 2022, due to increase consumption the total impacts from the consumption of French agricultural products has increased in most sectors. 
-
 
 
