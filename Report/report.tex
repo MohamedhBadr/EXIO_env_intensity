@@ -51,23 +51,27 @@ To adjust for inflation, we use the Food and Agriculture Organisation of the Uni
 
 \section{Results}
 
-Fig. \ref{fig:multipliers} shows the normalized evolution of the 14 agricultural multipliers from the year 1996 - 2021. Note that this data has not been adjusted for inflation, which would artificially increase the rate of reduction. The general trend is a decrease of the multipliers over time.
+Fig. \ref{fig:rawmultipliers} shows the normalized evolution of the agricultural multipliers from the year 1996 - 2022 as obtained directly from the Pymrio calculation. We can see that animal production sectors such as cattle, animal products, raw milk and meat animals nec have by far with largest multipliers per euro sold. This again is for the production sectors, whereas EXIOBASE incorporates other product sectors for the final products as sold to consumers.
 
-In order to identify whether the 
+Based on the raw multipliers, it would appear that the trend is a decrease in multipliers over the time period considered. However, as we will see in the next figure, this is misleading.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{raw_multipliers}
+\includegraphics[width=0.9\textwidth]{raw_multipliers}
 \caption{The multipliers per sector for French agriculture 1996 - 2022.}\label{fig:rawmultipliers} 
 \end{figure}
 
+Since multipliers are expressed in terms of currency, changes over time cannot be properly considered without taking into account the effects of inflation. The multipliers were therefore adjusted using the consumer price indices from FAOSTAT. Applying this index is a simplification, as inflation in certain sectors of agriculture might be larger than others. Furthermore the inflation indices are for end consumer prices whereas we are considering intermediate agricultural products. We consider it good enough for a first order estimate. The consumer price indices are given with a base year of 2015, such that the multipliers for earlier years are general lower that in Fig. \ref{fig:rawmultipliers} and later years increase.
+
+Fig. \ref{fig:adjustedmultipliers} shows the inflation-adjusted multipliers for the agricultural sectors. The downward trend is now far less prominent. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{inflated_adjusted}
+\includegraphics[width=0.9\textwidth]{inflated_adjusted}
 \caption{The inflation-adjusted multipliers per sector for French agriculture 1996 - 2022}\label{fig:adjustedmultipliers} 
 \end{figure}
 
+In order to determine the trend in the evolution of the multipliers, the data was normalized relative to the starting year (1996) and the data for each sector was fit to a straight line. The slope of the line then gives us the averge percentwise change of the multipliers per year. Fig. \ref{fig:slope} shows the slopes of the normalized multipliers, ordered from smallest to largest. 
 
 \begin{figure}[H]
 \centering
@@ -75,8 +79,25 @@ In order to identify whether the
 \caption{The slope of the normalized multiplier line for each sector for the period 1996 - 2022}\label{fig:slope} 
 \end{figure}
 
+The average slope was -0.12\% per year, indicating that the multipliers are in fact trending very slightly downward. From Fig. \ref{fig:slope} it can be clearly seen that most slopes were less than -2\% per year. Outliers are the sectors "wool, silk-worm cocoons" and paddy rice. Wool trends strong negative, but this is mostly due to the erratic behavior of the multiplier, which exhibited a severe spike around 2008 before decrease towards 2022 and landed at essentially the same value as 1996. Paddy rice exhibits a strong increase of over 10\%, but has the lowest multiplier in terms of absolute value to begin with. The multipliers with the largest absolute value (cattle, raw milk, etc) exhibit the least amount of change.
+
+In order to put the findings in context, we additionally calculated the total agricultural footprint by summing the total impacts for each of the sectors considered. Fig. \ref{fig:totalfootprint} shows the total footprint for agricultural sectors of France during the time periode considered. Despite some oscillations, the footprint is essentially stagnant or even slightly decreasing (see trendline in figure).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{totalfootprint}
+\caption{The slope of the normalized multiplier line for each sector for the period 1996 - 2022}\label{fig:totalfootprint} 
+\end{figure}
 
 \section{Discussion}
+
+Multipliers basically constant. Indicates no significant improvement in technology since 1996. (Discuss in context with energy article!)
+
+Discuss uncertainty about findings due to simplification of inflation data.
+
+France has reported a decrease in agriculture emissions. Since we are considering multipliers and these and the footprint are relatively stable this could indicate an increase in emissions import. 
+
+Overall, when footprint is considered, Frances agricultural sector is not improving.
 
 \bibliography{IOreport}
 
